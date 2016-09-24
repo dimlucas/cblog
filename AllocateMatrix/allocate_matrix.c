@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int** allocateMatrix(int rows, int cols);
-void freeMatrix(int** matrix, int rows, int cols);
+void freeMatrix(int** matrix, int rows);
 void initMatrix(int** matrix, int rows, int cols);
 void initMatrixZero(int** matrix, int rows, int cols);
 void printMatrix(int** matrix, int rows, int cols);
@@ -37,7 +37,7 @@ int** allocateMatrix(int rows, int cols)
 	return matrix;
 }
 
-void freeMatrix(int** matrix, int rows, int cols)
+void freeMatrix(int** matrix, int rows)
 {
 	int i;
 	for(i=0; i<rows; i++)
