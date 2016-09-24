@@ -4,6 +4,7 @@
 int** allocateMatrix(int rows, int cols);
 void freeMatrix(int** matrix, int rows, int cols);
 void initMatrix(int** matrix, int rows, int cols);
+void initMatrixZero(int** matrix, int rows, int cols);
 void printMatrix(int** matrix, int rows, int cols);
 void example(int rows, int cols);
 
@@ -56,6 +57,18 @@ void initMatrix(int** matrix, int rows, int cols)
 		{
 			matrix[i][j] = number;
 			number++;
+		}
+	}
+}
+
+void initMatrixZero(int** matrix, int rows, int cols)
+{
+	int i,j;
+	for(i=0; i<rows; i++)
+	{
+		for(j=0; j<cols; j++)
+		{
+			matrix[i][j] = 0;
 		}
 	}
 }
